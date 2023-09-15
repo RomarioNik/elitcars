@@ -1,7 +1,11 @@
-import React from "react";
+import { Wrapper, ButtonMore } from "./LoadMore.styled";
 
 const LoadMore = () => {
-  return <div>Load more...</div>;
+  return (
+    <Wrapper>
+      <ButtonMore>Load more</ButtonMore>
+    </Wrapper>
+  );
 };
 
 export default LoadMore;

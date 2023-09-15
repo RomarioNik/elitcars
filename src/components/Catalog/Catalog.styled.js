@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.section``;
+
 export const CardList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 50px;
-  column-gap: 29px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(274px, auto));
+  grid-column-gap: 29px;
+  grid-row-gap: 50px;
 `;

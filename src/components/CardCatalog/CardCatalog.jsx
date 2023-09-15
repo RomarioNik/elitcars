@@ -19,32 +19,30 @@ const CardCatalog = ({ carData }) => {
   const { firstLine, secondLine } = createShortFeature(carData);
 
   return (
-    <ul>
-      <ListItem>
-        <Thumb>
-          <Image src={img} alt={`${make} ${model}`} />
-        </Thumb>
-        <TitleWrapp>
-          <Title>
-            {make} <TitleModel>{model}</TitleModel>, {year}
-          </Title>
-          <Price>{rentalPrice}</Price>
-        </TitleWrapp>
-        <FeatureWrapp>
-          <Features>
-            {firstLine.map((item, index) => (
-              <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
-            ))}
-          </Features>
-          <Features>
-            {secondLine.map((item, index) => (
-              <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
-            ))}
-          </Features>
-        </FeatureWrapp>
-        <Button children="Learn more" />
-      </ListItem>
-    </ul>
+    <ListItem>
+      <Thumb>
+        <Image src={img} alt={`${make} ${model}`} />
+      </Thumb>
+      <TitleWrapp>
+        <Title>
+          {make} <TitleModel>{model}</TitleModel>, {year}
+        </Title>
+        <Price>{rentalPrice}</Price>
+      </TitleWrapp>
+      <FeatureWrapp>
+        <Features>
+          {firstLine.map((item, index) => (
+            <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
+          ))}
+        </Features>
+        <Features>
+          {secondLine.map((item, index) => (
+            <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
+          ))}
+        </Features>
+      </FeatureWrapp>
+      <Button children="Learn more" />
+    </ListItem>
   );
 };
 

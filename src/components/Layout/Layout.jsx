@@ -4,7 +4,7 @@ import {
   Container,
   Wrapper,
   Header,
-  Logo,
+  MenuWrapper,
   Menu,
   MenuList,
   MenuListItem,
@@ -18,31 +18,35 @@ const Layout = () => {
   return (
     <Wrapper>
       <Header>
-        {/* <Container> */}
-        <Logo>
-          <NavLinkStyled to="/">ElitCars</NavLinkStyled>
-        </Logo>
-        <Menu>
-          <MenuList>
-            <MenuListItem>
-              <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>
-            </MenuListItem>
-            <MenuListItem>
-              <NavLinkStyled to="/favorites">Favorites</NavLinkStyled>
-            </MenuListItem>
-          </MenuList>
-        </Menu>
-        <ThemeContainer>
-          <p>Theme</p>
-        </ThemeContainer>
-        {/* </Container> */}
+        <Container>
+          <MenuWrapper>
+            <Menu>
+              <MenuList>
+                <MenuListItem>
+                  <NavLinkStyled to="/">ElitCars</NavLinkStyled>
+                </MenuListItem>
+                <MenuListItem>
+                  <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>
+                </MenuListItem>
+                <MenuListItem>
+                  <NavLinkStyled to="/favorites">Favorites</NavLinkStyled>
+                </MenuListItem>
+              </MenuList>
+            </Menu>
+            <ThemeContainer>
+              <p>Theme</p>
+            </ThemeContainer>
+          </MenuWrapper>
+        </Container>
       </Header>
       <Main>
         <Container>
           <Outlet />
         </Container>
       </Main>
-      <Footer>footer</Footer>
+      <Footer>
+        <Container>footer</Container>
+      </Footer>
     </Wrapper>
   );
 };
