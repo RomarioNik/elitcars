@@ -9,8 +9,8 @@ const apiCars = axios.create({
   },
 });
 
-export const getCars = async () => {
-  const res = await apiCars.get("/advert");
+export const getCars = async (page = 1) => {
+  const res = await apiCars.get(`/advert?p=${page}&l=8`);
   return res.data;
 };
 
