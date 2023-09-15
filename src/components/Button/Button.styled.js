@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
-  width: ${({ width }) => width || "100%"};
+  width: ${({ btnWidth }) => btnWidth || "100%"};
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: ${({ theme }) => theme.fontSize.sm};

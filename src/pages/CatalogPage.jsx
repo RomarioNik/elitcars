@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LoadMore from "../components/LoadMore";
 import Catalog from "../components/Catalog/Catalog";
 import { getCars } from "../services/carApi";
+import { limitOfCards } from "../constants/limitOfCards";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
@@ -16,7 +17,7 @@ const CatalogPage = () => {
         setIsLoading(true);
         const data = await getCars(page);
 
-        if (data.length < 8) {
+        if (data.length < limitOfCards) {
           setIsLoading(false);
           setCars((prev) => [...prev, ...data]);
           return setIsButtonDisabled(true);
@@ -40,7 +41,7 @@ const CatalogPage = () => {
   return (
     <>
       <section>filters</section>
-      {cars.length > 0 && <Catalog data={cars} />}
+      {(cars.length > 0) & !error && <Catalog data={cars} />}
       <LoadMore
         loadMore={getMoreCars}
         isLoading={isLoading}
