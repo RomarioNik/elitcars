@@ -59,11 +59,7 @@ export const NavLinkStyled = styled(NavLink)`
   font-weight: ${({ route, to }) => (route === to ? "bold" : "")};
   letter-spacing: 1px;
   user-select: none;
-  /* color: #fff; */
 `;
-
-// export const LogoWrapper = styled.span`
-// `;
 
 export const LogoName = styled.span`
   color: #e10000;
@@ -76,7 +72,6 @@ export const ThemeContainer = styled.div`
 export const Main = styled.main`
   position: relative;
   padding-top: 50px;
-  /* height: 100vh; */
 `;
 
 export const Footer = styled.footer`

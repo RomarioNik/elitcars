@@ -6,7 +6,5 @@ export const Wrapper = styled.div`
   left: 0;
   width: 100%;
   height: auto;
-  /* opacity: 0.1; */
   background-color: black;
-  /* z-index: 10; */
 `;

@@ -17,7 +17,6 @@ const Catalog = ({ data, favorite, carFavorites }) => {
     <Wrapper>
       {favorite ? (
         <CardList>
-          {/* <h1>visually hidden</h1> */}
           {cars &&
             cars.map((car) => (
               <CardCatalog
@@ -30,7 +29,6 @@ const Catalog = ({ data, favorite, carFavorites }) => {
         </CardList>
       ) : (
         <CardList>
-          {/* <h1>visually hidden</h1> */}
           {data &&
             data.map((car) => (
               <CardCatalog

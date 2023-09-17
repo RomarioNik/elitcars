@@ -15,7 +15,6 @@ import {
   LogoName,
   ThemeContainer,
   Main,
-  // Footer,
 } from "./Layout.styled";
 
 const Layout = () => {
@@ -77,9 +76,6 @@ const Layout = () => {
             <Outlet />
           </Container>
         </Main>
-        {/* <Footer>
-        <Container>footer</Container>
-      </Footer> */}
       </Wrapper>
     </ThemeProvider>
   );

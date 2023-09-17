@@ -3,6 +3,7 @@ import LoadMore from "../components/LoadMore";
 import Catalog from "../components/Catalog/Catalog";
 import { getCars } from "../services/carApi";
 import { limitOfCards } from "../constants/limitOfCards";
+import Loader from "../components/Loader";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
@@ -48,6 +49,7 @@ const CatalogPage = () => {
   return (
     <>
       <section>filters</section>
+      {isLoading && <Loader />}
       {cars.length > 0 && !error && (
         <>
           <Catalog data={cars} favorite={false} carFavorites={carFavorites} />

@@ -6,6 +6,7 @@ export const BackDrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 70;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: auto;
 `;
@@ -14,6 +15,7 @@ export const ModalWindow = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 80;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 541px;

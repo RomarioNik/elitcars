@@ -4,7 +4,7 @@ We are expert in car rental
 
 ## Available Options on Our Site
 
-On the main page you can watch slider with images and our slogans. Click link: [ElitCars] (https://romarionik.github.io/elitcars/)
+On the main page you can watch slider with images and our slogans. Click link: [ElitCars](https://romarionik.github.io/elitcars/)
 
 ![Main page whith slider](/assets/images/main.jpg)
 
