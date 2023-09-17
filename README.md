@@ -2,62 +2,44 @@
 
 We are expert in car rental
 
-## Available Options on Our
+## Available Options on Our Site
 
-On the main page you can see slider with our slogan and can watch images.
+On the main page you can watch slider with images and our slogans. Click link: [ElitCars] (https://romarionik.github.io/elitcars/)
 
 ![Main page whith slider](/assets/images/main.png)
 
 ### Catalog
 
-On catalog page you can find a lot of our rental cars.
+On catalog page you can find a lot of our best cars wich we are rent.
 
 ![Catalog page](/assets/images/catalog.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### More cars
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+At the end of the page you can click button "Load more" and will see different cars.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Button at the end of the page](/assets/images/more-cars.png)
 
-### `npm run eject`
+### Catalog
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you want to khow more information about selected car, press the button "Learn more".
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Button Leern more](/assets/images/more-info.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+After that a modal window will appear with complete information about the car.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Modal window with car info](/assets/images/modal-window.png)
 
-## Learn More
+### Favorite car
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Did you like the car? You can click on the "heart" in the upper right corner and the car will be added to your favorites.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Add car to favorite](/assets/images/add-to-favorite.png)
 
-### Code Splitting
+### Favorite Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can see all selected cars on the favorites page.
 
-### Analyzing the Bundle Size
+![Favorite page](/assets/images/favorite.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## We are expert in car rental. Enjoy your holidays with us.
