@@ -48,7 +48,7 @@ const CatalogPage = () => {
 
   return (
     <>
-      <section>filters</section>
+      {/* <section>filters</section> */}
       {isLoading && <Loader />}
       {cars.length > 0 && !error && (
         <>

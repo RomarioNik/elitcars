@@ -22,7 +22,6 @@ const FavoritesPage = () => {
         if (storage) {
           const favorite = JSON.parse(storage);
           const cars = filteredCars(data, favorite);
-          console.log(cars);
           setCars(cars);
         }
 
