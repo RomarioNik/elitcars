@@ -24,7 +24,8 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   flex-shrink: 1;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
+  border-bottom: ${({ ismagemain }) => (ismagemain ? "#fff" : "none")};
   background-color: ${({ theme, ismagemain }) =>
     ismagemain ? "transparent" : theme.color.bg};
 `;
@@ -72,6 +73,7 @@ export const ThemeContainer = styled.div`
 export const Main = styled.main`
   position: relative;
   padding-top: 50px;
+  background-color: ${({ theme }) => theme.color.bg};
 `;
 
 export const Footer = styled.footer`

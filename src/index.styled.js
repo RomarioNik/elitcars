@@ -10,6 +10,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  ${"" /* background-color: ${({ theme }) => theme.color.bg}; */}
 }
 
 h1,
