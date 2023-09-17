@@ -1,10 +1,11 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 // import "swiper/css/scrollbar";
 
 import {
@@ -23,14 +24,16 @@ import Car3 from "../../images/wallpeper/car-3.jpeg";
 const SwiperCars = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, A11y]}
+      modules={[Autoplay, Navigation, Pagination, A11y]}
       spaceBetween={0}
       slidesPerView={1}
       navigation
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
       pagination={{ clickable: true }}
-      // scrollbar={{ draggable: false }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
         <Thumb>

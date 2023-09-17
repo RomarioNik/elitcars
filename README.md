@@ -1,25 +1,18 @@
-# Getting Started with Create React App
+# Rent Car with US
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We are expert in car rental
 
-## Available Scripts
+## Available Options on Our
 
-In the project directory, you can run:
+On the main page you can see slider with our slogan and can watch images.
 
-### `npm start`
+![Main page whith slider](/assets/images/main.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Catalog
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On catalog page you can find a lot of our rental cars.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+![Catalog page](/assets/images/catalog.png)
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
