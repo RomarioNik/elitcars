@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { createPortal } from "react-dom";
 import { BackDrop, ModalWindow, ButtonClose } from "./Modal.styled";
+import Icon from "../Icon";
 
 const modalRoot = document.querySelector("#modal-root");
 
@@ -32,7 +33,7 @@ const Modal = ({ children, onToggleModal }) => {
     <BackDrop onClick={handleBackDropClick}>
       <ModalWindow>
         <ButtonClose type="button" onClick={onToggleModal}>
-          X
+          <Icon id="icon-close" svgStroke="#000" svgWidth={20} svgHeight={20} />
         </ButtonClose>
         {children}
       </ModalWindow>
