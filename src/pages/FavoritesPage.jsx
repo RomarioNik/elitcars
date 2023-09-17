@@ -8,7 +8,7 @@ const FavoritesPage = () => {
   // const [carFavorites, setCarFavorites] = useState([]);
   // const [page, setPage] = useState(1);
   // const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const filteredCars = (cars, favorite) => {
@@ -18,7 +18,7 @@ const FavoritesPage = () => {
   useEffect(() => {
     const getCars = async () => {
       try {
-        setIsLoading(true);
+        // setIsLoading(true);
         const data = await getAllCars();
 
         const storage = localStorage.getItem("carfavorite");
@@ -29,9 +29,9 @@ const FavoritesPage = () => {
           setCars(cars);
         }
 
-        setIsLoading(false);
+        // setIsLoading(false);
       } catch (error) {
-        setIsLoading(false);
+        // setIsLoading(false);
         setError(error.message);
       }
     };

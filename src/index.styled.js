@@ -4,6 +4,7 @@ import "sanitize.css";
 export const GlobalStyle = createGlobalStyle`
 
 body {
+  position: relative;
   font-family: Manrope, sans-serif;
   font-size: 12px;
   font-style: normal;

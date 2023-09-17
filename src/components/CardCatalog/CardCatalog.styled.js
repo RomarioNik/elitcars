@@ -16,7 +16,7 @@ export const Thumb = styled.div`
 
 export const Image = styled.img`
   object-fit: cover;
-  object-position: right;
+  /* object-position: right; */
 `;
 
 export const ButtonWrap = styled.div`

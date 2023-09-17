@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  /* height: 100%; */
 `;
 
 export const Container = styled.div`
@@ -14,12 +15,19 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 1;
-  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  background-color: ${({ theme, ismagemain }) =>
+    ismagemain ? "transparent" : theme.color.bg};
 `;
 
 export const MenuWrapper = styled.div`
@@ -39,13 +47,38 @@ export const MenuList = styled.ul`
   gap: 20px;
 `;
 
-export const MenuListItem = styled.li``;
+export const MenuListItem = styled.li`
+  align-self: center;
+`;
 
-export const NavLinkStyled = styled(NavLink)``;
+export const NavLinkStyled = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  color: ${({ theme, ismagemain }) =>
+    ismagemain ? "#fff" : theme.color.primary};
+  font-size: ${({ theme }) => theme.fontSize.sm};
+  font-weight: ${({ route, to }) => (route === to ? "bold" : "")};
+  letter-spacing: 1px;
+  user-select: none;
+  /* color: #fff; */
+`;
 
-export const ThemeContainer = styled.div``;
+// export const LogoWrapper = styled.span`
+// `;
 
-export const Main = styled.main``;
+export const LogoName = styled.span`
+  color: #e10000;
+`;
+
+export const ThemeContainer = styled.div`
+  display: ${({ ismagemain }) => (ismagemain ? "none" : "block")};
+`;
+
+export const Main = styled.main`
+  position: relative;
+  padding-top: 50px;
+  /* height: 100vh; */
+`;
 
 export const Footer = styled.footer`
   height: 50px;
