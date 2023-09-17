@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ButtonStyled } from "./ButtonFavorite.styled";
 import Icon from "../Icon";
 
-const ButtonFavorite = ({ idCar, favoriteCar = false }) => {
+const ButtonFavorite = ({ idCar, favoriteCar = false, removeCar }) => {
   const [favorite, setFavorite] = useState(favoriteCar);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -39,6 +39,10 @@ const ButtonFavorite = ({ idCar, favoriteCar = false }) => {
 
     storage.splice(idx, 1);
     saveIdCarToLocalStorage(storage);
+
+    if (removeCar) {
+      removeCar(id);
+    }
   };
 
   return (

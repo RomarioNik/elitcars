@@ -6,6 +6,7 @@ import { limitOfCards } from "../constants/limitOfCards";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
+  const [carFavorites, setCarFavorites] = useState([]);
   const [page, setPage] = useState(1);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,12 +16,18 @@ const CatalogPage = () => {
     const getBaseCars = async () => {
       try {
         setIsLoading(true);
+        const storage = localStorage.getItem("carfavorite");
+        if (storage) {
+          setCarFavorites(JSON.parse(storage));
+        }
+
         const data = await getCars(page);
 
         if (data.length < limitOfCards) {
           setIsLoading(false);
           setCars((prev) => [...prev, ...data]);
-          return setIsButtonDisabled(true);
+          setIsButtonDisabled(true);
+          return;
         }
 
         setIsLoading(false);
@@ -41,12 +48,16 @@ const CatalogPage = () => {
   return (
     <>
       <section>filters</section>
-      {(cars.length > 0) & !error && <Catalog data={cars} />}
-      <LoadMore
-        loadMore={getMoreCars}
-        isLoading={isLoading}
-        isButtonDisabled={isButtonDisabled}
-      />
+      {cars.length > 0 && !error && (
+        <>
+          <Catalog data={cars} favorite={false} carFavorites={carFavorites} />
+          <LoadMore
+            loadMore={getMoreCars}
+            isLoading={isLoading}
+            isButtonDisabled={isButtonDisabled}
+          />
+        </>
+      )}
     </>
   );
 };

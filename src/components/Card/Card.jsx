@@ -37,7 +37,7 @@ const Card = ({ carId }) => {
 
   return (
     <div>
-      {car && (
+      {car && !error && (
         <>
           <Thumb>
             <Image src={car.img} alt={`${car.make} ${car.model}`} />

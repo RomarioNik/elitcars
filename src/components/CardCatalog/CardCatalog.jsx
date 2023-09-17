@@ -18,7 +18,7 @@ import Modal from "../Modal";
 import Card from "../Card";
 import ButtonFavorite from "../ButtonFavorite";
 
-const CardCatalog = ({ carData }) => {
+const CardCatalog = ({ carData, favoriteCar, removeCar }) => {
   const [modal, setModal] = useState(false);
 
   const { id, img, make, model, year, rentalPrice } = carData;
@@ -34,7 +34,11 @@ const CardCatalog = ({ carData }) => {
         <Thumb>
           <Image src={img} alt={`${make} ${model}`} />
           <ButtonWrap>
-            <ButtonFavorite idCar={id} favoriteCar={false} />
+            <ButtonFavorite
+              idCar={id}
+              removeCar={removeCar}
+              favoriteCar={favoriteCar}
+            />
           </ButtonWrap>
         </Thumb>
         <TitleWrapp>

@@ -10,6 +10,11 @@ const apiCars = axios.create({
   },
 });
 
+export const getAllCars = async () => {
+  const { data } = await apiCars.get("/advert");
+  return data;
+};
+
 export const getCars = async (page = 1) => {
   const { data } = await apiCars.get(`/advert?p=${page}&l=${limitOfCards}`);
   return data;
