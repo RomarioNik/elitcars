@@ -25,7 +25,8 @@ export const Header = styled.header`
   align-items: center;
   flex-shrink: 1;
   /* border-bottom: 1px solid #fff; */
-  border-bottom: ${({ ismagemain }) => (ismagemain ? "#fff" : "none")};
+  border-bottom: ${({ ismagemain }) =>
+    ismagemain ? "1px solid #fff" : "none"};
   background-color: ${({ theme, ismagemain }) =>
     ismagemain ? "transparent" : theme.color.bg};
 `;
