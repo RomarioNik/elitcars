@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Thumb,
   Image,
@@ -7,6 +7,8 @@ import {
   FeatureWrapp,
   Features,
   FeaturesItem,
+  Accessories,
+  AccessoriesItem,
   Description,
   TitleMidle,
   RulesList,
@@ -14,101 +16,94 @@ import {
   RulesNumber,
   ButtonPhone,
 } from "./Card.styled";
+import { getCarById } from "../../services/carApi";
 
-const data = {
-  id: "9582",
-  year: 2008,
-  make: "Buick",
-  model: "Enclave",
-  type: "SUV",
-  img: "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/buick_enclave.jpg",
-  description:
-    "The Buick Enclave is a stylish and spacious SUV known for its comfortable ride and luxurious features.",
-  fuelConsumption: "10.5",
-  engineSize: "3.6L V6",
-  accessories: ["Leather seats", "Panoramic sunroof", "Premium audio system"],
-  functionalities: ["Power liftgate", "Remote start", "Blind-spot monitoring"],
-  rentalPrice: "$40",
-  rentalCompany: "Luxury Car Rentals",
-  address: "123 Example Street, Kiev, Ukraine",
-  rentalConditions:
-    "Minimum age: 25\nValid driver's license\nSecurity deposit required",
-  mileage: 5858,
-};
+const Card = ({ carId }) => {
+  const [car, setCar] = useState(null);
+  const [error, setError] = useState(null);
 
-const Card = () => {
-  const [city, country] = data.address.split(", ").slice(1);
+  useEffect(() => {
+    const getCar = async (id) => {
+      try {
+        const car = await getCarById(id);
+        setCar(car);
+      } catch (e) {
+        setError(e.message);
+      }
+    };
 
-  const conditions = data.rentalConditions.split("\n");
+    getCar(carId);
+  }, [carId]);
 
   return (
     <div>
-      <Thumb>
-        <Image src={data.img} alt={`${data.make} ${data.model}`} />
-      </Thumb>
+      {car && (
+        <>
+          <Thumb>
+            <Image src={car.img} alt={`${car.make} ${car.model}`} />
+          </Thumb>
 
-      <Title>
-        {data.make} <TitleModel>{data.model}</TitleModel>, {data.year}
-      </Title>
+          <Title>
+            {car.make} <TitleModel>{car.model}</TitleModel>, {car.year}
+          </Title>
 
-      <FeatureWrapp>
-        <Features>
-          <FeaturesItem>{city}&nbsp;</FeaturesItem>
-          <FeaturesItem>{country}&nbsp;</FeaturesItem>
-          <FeaturesItem>Id: {data.id}&nbsp;</FeaturesItem>
-          <FeaturesItem>Year: {data.year}&nbsp;</FeaturesItem>
-          <FeaturesItem>Type: {data.type}</FeaturesItem>
-        </Features>
-        <Features>
-          <FeaturesItem>
-            Fuel Consumption: {data.fuelConsumption}&nbsp;
-          </FeaturesItem>
-          <FeaturesItem>Engine Size: {data.engineSize}</FeaturesItem>
-        </Features>
-      </FeatureWrapp>
+          <FeatureWrapp>
+            <Features>
+              <FeaturesItem>{car.address.split(", ")[1]}&nbsp;</FeaturesItem>
+              <FeaturesItem>{car.address.split(", ")[2]}&nbsp;</FeaturesItem>
+              <FeaturesItem>Id: {car.id}&nbsp;</FeaturesItem>
+              <FeaturesItem>Year: {car.year}&nbsp;</FeaturesItem>
+              <FeaturesItem>Type: {car.type}</FeaturesItem>
+            </Features>
+            <Features>
+              <FeaturesItem>
+                Fuel Consumption: {car.fuelConsumption}&nbsp;
+              </FeaturesItem>
+              <FeaturesItem>Engine Size: {car.engineSize}</FeaturesItem>
+            </Features>
+          </FeatureWrapp>
 
-      <Description>{data.description}</Description>
+          <Description>{car.description}</Description>
 
-      <TitleMidle>Accessories and functionalities:</TitleMidle>
-      <FeatureWrapp>
-        <Features>
-          {data.accessories.map((item, index) => (
-            <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
-          ))}
-        </Features>
-        <Features>
-          {data.functionalities.map((item, index) => (
-            <FeaturesItem key={index}>{item}&nbsp;</FeaturesItem>
-          ))}
-        </Features>
-      </FeatureWrapp>
+          <TitleMidle>Accessories and functionalities:</TitleMidle>
+          <FeatureWrapp>
+            <Accessories>
+              {[...car.accessories, ...car.functionalities].map(
+                (item, index) => (
+                  <AccessoriesItem key={index}>{item}&nbsp;</AccessoriesItem>
+                )
+              )}
+            </Accessories>
+          </FeatureWrapp>
 
-      <TitleMidle>Rental Conditions:</TitleMidle>
+          <TitleMidle>Rental Conditions:</TitleMidle>
 
-      <RulesList>
-        {conditions.map((item, index) => {
-          const rule = item.split(/(\d+)/);
-          if (rule[1]) {
-            return (
-              <RulesListItem key={index}>
-                {rule[0]}
-                <RulesNumber>{rule[1]}</RulesNumber>
-              </RulesListItem>
-            );
-          }
-          return <RulesListItem key={index}>{rule[0]}</RulesListItem>;
-        })}
-        <RulesListItem>
-          Mileage:{" "}
-          <RulesNumber>{data.mileage.toLocaleString("en-US")}</RulesNumber>
-        </RulesListItem>
-        <RulesListItem>
-          Price:{" "}
-          <RulesNumber>{data.rentalPrice.split(/(\d+)/)[1]}$</RulesNumber>
-        </RulesListItem>
-      </RulesList>
+          <RulesList>
+            {car.rentalConditions.split("\n").map((item, index) => {
+              const rule = item.split(/(\d+)/);
+              if (rule[1]) {
+                return (
+                  <RulesListItem key={index}>
+                    {rule[0]}
+                    <RulesNumber>{rule[1]}</RulesNumber>
+                  </RulesListItem>
+                );
+              }
+              return <RulesListItem key={index}>{rule[0]}</RulesListItem>;
+            })}
+            <RulesListItem>
+              Mileage:{" "}
+              <RulesNumber>{car.mileage.toLocaleString("en-US")}</RulesNumber>
+            </RulesListItem>
+            <RulesListItem>
+              Price:{" "}
+              <RulesNumber>{car.rentalPrice.split(/(\d+)/)[1]}$</RulesNumber>
+            </RulesListItem>
+          </RulesList>
 
-      <ButtonPhone href="tel:+380730000000">Rental car</ButtonPhone>
+          <ButtonPhone href="tel:+380730000000">Rental car</ButtonPhone>
+        </>
+      )}
     </div>
   );
 };

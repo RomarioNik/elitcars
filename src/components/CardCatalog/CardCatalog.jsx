@@ -4,6 +4,7 @@ import {
   ListItem,
   Thumb,
   Image,
+  ButtonWrap,
   TitleWrapp,
   Title,
   Price,
@@ -15,11 +16,12 @@ import {
 import Button from "../Button";
 import Modal from "../Modal";
 import Card from "../Card";
+import ButtonFavorite from "../ButtonFavorite";
 
 const CardCatalog = ({ carData }) => {
   const [modal, setModal] = useState(false);
 
-  const { img, make, model, year, rentalPrice } = carData;
+  const { id, img, make, model, year, rentalPrice } = carData;
   const { firstLine, secondLine } = createShortFeature(carData);
 
   const onToggleModal = () => {
@@ -31,6 +33,9 @@ const CardCatalog = ({ carData }) => {
       <ListItem>
         <Thumb>
           <Image src={img} alt={`${make} ${model}`} />
+          <ButtonWrap>
+            <ButtonFavorite idCar={id} favoriteCar={false} />
+          </ButtonWrap>
         </Thumb>
         <TitleWrapp>
           <Title>
@@ -54,7 +59,7 @@ const CardCatalog = ({ carData }) => {
       </ListItem>
       {modal && (
         <Modal onToggleModal={onToggleModal}>
-          <Card />
+          <Card carId={carData.id} />
         </Modal>
       )}
     </>

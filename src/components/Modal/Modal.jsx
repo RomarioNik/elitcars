@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { createPortal } from "react-dom";
-import {
-  BackDrop,
-  //   ModalWrapper,
-  ModalWindow,
-  ButtonClose,
-} from "./Modal.styled";
+import { BackDrop, ModalWindow, ButtonClose } from "./Modal.styled";
 
 const modalRoot = document.querySelector("#modal-root");
-// const body = document.body;
 
 const Modal = ({ children, onToggleModal }) => {
   useEffect(() => {
@@ -36,14 +30,12 @@ const Modal = ({ children, onToggleModal }) => {
 
   return createPortal(
     <BackDrop onClick={handleBackDropClick}>
-      {/* <ModalWrapper> */}
       <ModalWindow>
         <ButtonClose type="button" onClick={onToggleModal}>
           X
         </ButtonClose>
         {children}
       </ModalWindow>
-      {/* </ModalWrapper> */}
     </BackDrop>,
     modalRoot
   );

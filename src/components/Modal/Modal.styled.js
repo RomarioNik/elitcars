@@ -7,28 +7,13 @@ export const BackDrop = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 `;
 
-// export const ModalWrapper = styled.div`
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-
-//   width: 100%;
-//   max-width: 541px;
-//   /* padding: 40px; */
-//   /* background-color: ${({ theme }) => theme.color.bg}; */
-//   /* border-radius: ${({ theme }) => theme.borderRadius.large}; */
-//   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
-//   padding: 15px;
-//   background-color: transparent;
-// `;
-
 export const ModalWindow = styled.div`
-  position: fixed;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 541px;

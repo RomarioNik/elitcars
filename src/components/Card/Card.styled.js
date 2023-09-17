@@ -29,16 +29,66 @@ export const FeatureWrapp = styled.div`
 
 export const Features = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: 400;
   color: ${({ theme }) => theme.color.features};
 `;
 
 export const FeaturesItem = styled.li`
-  &:not(:first-child)::before {
+  &:nth-child(even)::before {
     content: "| ";
     color: ${({ theme }) => theme.color.stroke};
   }
+  white-space: nowrap;
+`;
+
+export const Accessories = styled.ul`
+  /* display: grid; */
+  /* grid-auto-columns: max-content 1fr; */
+  /* grid-template-columns: repeat(auto-fill); */
+  /* grid-template-columns: auto 1fr; */
+  /* grid-auto-flow: row; */
+  /* grid-template-areas:
+    "header aside"
+    "header aside"
+    "header aside"; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* row-gap: 8px; */
+  display: flex;
+  flex-wrap: wrap;
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-weight: 400;
+  color: ${({ theme }) => theme.color.features};
+`;
+
+export const AccessoriesItem = styled.li`
+  /* grid-area: 1/2; */
+  /* grid-column: span 2; */
+  /* grid-column-start: 2; */
+  /* grid-column-end: 2; */
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
+
+  &:not(:last-child):not(:first-child)::before {
+    content: "| ";
+    color: ${({ theme }) => theme.color.stroke};
+  }
+
+  &:nth-child(even) {
+    /* flex-wrap: nowrap; */
+    /* grid-area: header; */
+    /* display: inline;
+    float: left; */
+  }
+
+  &:nth-child(odd) {
+    /* grid-area: aside; */
+    /* display: inline;
+    float: left; */
+  }
+  /* white-space: nowrap; */
 `;
 
 export const Description = styled.p`

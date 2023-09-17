@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ListItem = styled.li`
-  /* width: 274px; */
   height: 100%;
   display: flex;
   flex-direction: column;
 `;
 
 export const Thumb = styled.div`
-  /* width: 274px; */
+  position: relative;
   height: 268px;
   margin-bottom: 14px;
   border-radius: ${({ theme }) => theme.borderRadius.medium};
@@ -18,6 +17,12 @@ export const Thumb = styled.div`
 export const Image = styled.img`
   object-fit: cover;
   object-position: right;
+`;
+
+export const ButtonWrap = styled.div`
+  position: absolute;
+  top: 14px;
+  right: 14px;
 `;
 
 export const TitleWrapp = styled.div`

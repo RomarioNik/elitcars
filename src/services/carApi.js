@@ -11,19 +11,11 @@ const apiCars = axios.create({
 });
 
 export const getCars = async (page = 1) => {
-  const res = await apiCars.get(`/advert?p=${page}&l=${limitOfCards}`);
-  return res.data;
+  const { data } = await apiCars.get(`/advert?p=${page}&l=${limitOfCards}`);
+  return data;
 };
 
-// export const getMovie = async (id) => {
-//   return await axios.get(`/movie/${id}`, {
-//     params: {
-//       api_key: API_KEY,
-//     },
-//   });
-// };
-
-// export const getMaterials = async () => {
-//   const res = await axios.get("/materials");
-//   return res.data;
-// };
+export const getCarById = async (id) => {
+  const { data } = await apiCars.get(`/advert/${id}`);
+  return data;
+};
