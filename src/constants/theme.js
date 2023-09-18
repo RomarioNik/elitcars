@@ -11,21 +11,23 @@ const lightTheme = {
   filtersBg: "#F7F7FB",
   buttonBg: "#3470FF",
   conditionsBg: "#F9F9F9", // in modal window
+  closeIconStroke: "#121417", // in modal window
 };
 
 const darktheme = {
   primary: "#fff",
-  secondary: "#3470FF", // blue
-  features: "rgba(18, 20, 23, 0.50)", // car features
-  stroke: "rgba(18, 20, 23, 0.10)", // divider features
+  secondary: "#3470FF",
+  features: "rgba(255, 255, 255, 0.50)",
+  stroke: "rgba(255, 255, 255, 0.30)",
   conditions: "#363535", // conditions in modal
   filters: "#8A8A89", // filters names
   select: "rgba(18, 20, 23, 0.20)", // dropdown list
-  btnText: "#fff", // button text
+  btnText: "#fff",
   bg: "#121417",
   filtersBg: "#F7F7FB",
   buttonBg: "#3470FF",
-  conditionsBg: "#F9F9F9", // in modal window
+  conditionsBg: "#F9F9F9",
+  closeIconStroke: "#F9F9F9",
 };
 
 const defaultTheme = {

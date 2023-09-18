@@ -5,12 +5,12 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   position: relative;
-  font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-family: ${({ theme }) => theme.font.primary};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  ${"" /* background-color: ${({ theme }) => theme.color.bg}; */}
+  background-color: ${({ theme }) => theme.color.bg};
 }
 
 h1,

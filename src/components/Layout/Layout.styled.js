@@ -24,7 +24,6 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   flex-shrink: 1;
-  /* border-bottom: 1px solid #fff; */
   border-bottom: ${({ ismagemain }) =>
     ismagemain ? "1px solid #fff" : "none"};
   background-color: ${({ theme, ismagemain }) =>
@@ -71,10 +70,14 @@ export const ThemeContainer = styled.div`
   display: ${({ ismagemain }) => (ismagemain ? "none" : "block")};
 `;
 
+export const ButtonStyled = styled.button`
+  color: ${({ theme }) => theme.color.primary};
+  background-color: transparent;
+`;
+
 export const Main = styled.main`
   position: relative;
   padding-top: 50px;
-  background-color: ${({ theme }) => theme.color.bg};
 `;
 
 export const Footer = styled.footer`
