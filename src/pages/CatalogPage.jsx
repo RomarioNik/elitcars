@@ -4,6 +4,7 @@ import Catalog from "../components/Catalog/Catalog";
 import { getCars } from "../services/carApi";
 import { limitOfCards } from "../constants/limitOfCards";
 import Loader from "../components/Loader";
+import Filters from "../components/Filters";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
@@ -46,9 +47,14 @@ const CatalogPage = () => {
     setPage((prev) => prev + 1);
   };
 
+  const getFilteredCars = (fiteredCars) => {
+    setCars(fiteredCars);
+    setIsButtonDisabled(true);
+  };
+
   return (
     <>
-      {/* <section>filters</section> */}
+      <Filters getFilteredCars={getFilteredCars} />
       {isLoading && <Loader />}
       {cars.length > 0 && !error && (
         <>

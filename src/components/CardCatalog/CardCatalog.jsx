@@ -59,7 +59,7 @@ const CardCatalog = ({ carData, favoriteCar, removeCar }) => {
             ))}
           </Features>
         </FeatureWrapp>
-        <Button children="Learn more" click={onToggleModal} />
+        <Button type="submit" children="Learn more" click={onToggleModal} />
       </ListItem>
       {modal && (
         <Modal onToggleModal={onToggleModal}>

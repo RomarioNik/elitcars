@@ -9,6 +9,9 @@ const lightTheme = {
   btnText: "#fff", // button text
   bg: "#fff", // fon
   filtersBg: "#F7F7FB",
+  filtersShadow: "rgba(0, 0, 0, 0.02)",
+  filtersBorder: "rgba(18, 20, 23, 0.05)",
+  filtersMileageBorder: "rgba(138, 138, 137, 0.20)",
   buttonBg: "#3470FF",
   conditionsBg: "#F9F9F9", // in modal window
   closeIconStroke: "#121417", // in modal window
@@ -25,6 +28,9 @@ const darktheme = {
   btnText: "#fff",
   bg: "#121417",
   filtersBg: "#F7F7FB",
+  filtersShadow: "rgba(255, 255, 255, 0.02)",
+  filtersBorder: "rgba(18, 20, 23, 0.05)",
+  filtersMileageBorder: "rgba(138, 138, 137, 0.20)",
   buttonBg: "#3470FF",
   conditionsBg: "#F9F9F9",
   closeIconStroke: "#F9F9F9",

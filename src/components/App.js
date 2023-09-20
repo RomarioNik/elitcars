@@ -20,10 +20,6 @@ const App = () => {
         return;
       }
 
-      // if (currentTheme === JSON.parse(storage)) {
-      //   return;
-      // }
-
       setCurrentTheme(JSON.parse(localStorage.getItem("theme")));
     } catch (error) {
       console.log(error.message);
