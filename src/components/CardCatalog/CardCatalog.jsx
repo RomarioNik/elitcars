@@ -32,7 +32,7 @@ const CardCatalog = ({ carData, favoriteCar, removeCar }) => {
     <>
       <ListItem>
         <Thumb>
-          <Image src={img} alt={`${make} ${model}`} />
+          <Image src={img} alt={`${make} ${model}`} width={274} />
           <ButtonWrap>
             <ButtonFavorite
               idCar={id}

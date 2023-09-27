@@ -67,10 +67,14 @@ export const LogoName = styled.span`
 `;
 
 export const ThemeContainer = styled.div`
-  display: ${({ ismagemain }) => (ismagemain ? "none" : "block")};
+  display: ${({ ismagemain }) => (ismagemain ? "none" : "flex")};
+  align-items: center;
+  border: 1px solid ${({ theme }) => theme.color.themeBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.extraSmall};
 `;
 
 export const ButtonStyled = styled.button`
+  padding: 0 6px;
   color: ${({ theme }) => theme.color.primary};
   background-color: transparent;
 `;

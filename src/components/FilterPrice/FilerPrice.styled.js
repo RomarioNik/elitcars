@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 125px;
+  width: 125px;
 `;
 
 export const Label = styled.label`
@@ -18,43 +17,24 @@ export const Label = styled.label`
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
+  overflow: hidden;
+  border: 1px solid ${({ theme }) => theme.color.filtersInputBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
 `;
 
 export const Text = styled.p`
   width: 100%;
-  padding: 14px 0 14px 14px;
+  padding: 12px 0 12px 14px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;
+  white-space: nowrap;
   color: ${({ theme }) => theme.color.primary};
-  border-bottom-left-radius: ${({ theme }) => theme.borderRadius.medium};
-  border-top-left-radius: ${({ theme }) => theme.borderRadius.medium};
   background-color: ${({ theme }) => theme.color.filtersBg};
-`;
-
-export const Input = styled.input`
-  width: 40px;
-  padding: 14px 0 14px 8px;
-  font-size: ${({ theme }) => theme.fontSize.lg};
-  font-weight: 500;
-  line-height: 1.11;
-  color: ${({ theme }) => theme.color.primary};
-  outline: none;
-  border: none;
-  background-color: ${({ theme }) => theme.color.filtersBg};
-
-  ::placeholder {
-    font-size: ${({ theme }) => theme.fontSize.lg};
-    font-weight: 500;
-    line-height: 1.11;
-    color: black;
-  }
 `;
 
 export const ButtonStyled = styled.button`
-  padding: 14px;
-  border-top-right-radius: ${({ theme }) => theme.borderRadius.medium};
-  border-bottom-right-radius: ${({ theme }) => theme.borderRadius.medium};
+  padding: 12px;
   background-color: ${({ theme }) => theme.color.filtersBg};
 `;
 

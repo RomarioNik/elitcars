@@ -16,11 +16,14 @@ export const Label = styled.label`
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
+  overflow: hidden;
+  border: 1px solid ${({ theme }) => theme.color.filtersInputBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
   max-width: 320px;
 `;
 
 export const TextFrom = styled.span`
-  padding: 14px 0 14px 14px;
+  padding: 12px 0 12px 14px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;
@@ -32,7 +35,7 @@ export const TextFrom = styled.span`
 
 export const InputFrom = styled.input`
   width: 104px;
-  padding: 14px 0 14px 8px;
+  padding: 12px 0 12px 8px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;
@@ -44,7 +47,7 @@ export const InputFrom = styled.input`
 `;
 
 export const TextTo = styled.span`
-  padding: 14px 0 14px 14px;
+  padding: 12px 0 12px 14px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;
@@ -54,7 +57,7 @@ export const TextTo = styled.span`
 
 export const InputTo = styled.input`
   width: 104px;
-  padding: 14px 0 14px 8px;
+  padding: 12px 0 12px 8px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;

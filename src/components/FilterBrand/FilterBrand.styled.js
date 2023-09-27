@@ -16,25 +16,24 @@ export const Label = styled.label`
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
+  overflow: hidden;
+  border: 1px solid ${({ theme }) => theme.color.filtersInputBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
 `;
 
 export const Input = styled.input`
-  padding: 14px 0 14px 18px;
+  padding: 12px 0 12px 18px;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 500;
   line-height: 1.11;
   color: ${({ theme }) => theme.color.primary};
   outline: none;
   border: none;
-  border-bottom-left-radius: ${({ theme }) => theme.borderRadius.medium};
-  border-top-left-radius: ${({ theme }) => theme.borderRadius.medium};
   background-color: ${({ theme }) => theme.color.filtersBg};
 `;
 
 export const ButtonStyled = styled.button`
-  padding: 14px;
-  border-top-right-radius: ${({ theme }) => theme.borderRadius.medium};
-  border-bottom-right-radius: ${({ theme }) => theme.borderRadius.medium};
+  padding: 12px;
   background-color: ${({ theme }) => theme.color.filtersBg};
 `;
 

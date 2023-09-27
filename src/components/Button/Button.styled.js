@@ -7,7 +7,13 @@ export const ButtonStyled = styled.button`
   font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: 600;
   line-height: 1.42;
-  color: var(--White, #fff);
+  color: ${({ theme }) => theme.color.btnText};
+  border: 1px solid ${({ theme }) => theme.color.buttonBg};
   border-radius: ${({ theme }) => theme.borderRadius.small};
   background-color: ${({ theme }) => theme.color.buttonBg};
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.color.btnHover};
+    background-color: ${({ theme }) => theme.color.btnHover};
+  }
 `;

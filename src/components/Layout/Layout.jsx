@@ -60,7 +60,7 @@ const Layout = ({ toggleTheme }) => {
               </MenuList>
             </Menu>
             <ThemeContainer ismagemain={ismagemain}>
-              <ButtonStyled onClick={toggleTheme}>Switch theme</ButtonStyled>
+              <ButtonStyled onClick={toggleTheme}>Theme</ButtonStyled>
             </ThemeContainer>
           </MenuWrapper>
         </Container>

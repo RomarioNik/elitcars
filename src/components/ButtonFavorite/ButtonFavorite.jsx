@@ -50,11 +50,15 @@ const ButtonFavorite = ({ idCar, favoriteCar = false, removeCar }) => {
       type="button"
       disabled={isLoading}
       onClick={() => onToggleFavorite(idCar)}
+      favorite={favorite}
     >
       <Icon
         id="icon-heart"
-        svgStroke={favorite ? "#3470FF" : "#ffffff"}
-        svgFill={favorite ? "#3470FF" : "none"}
+        // svgStroke={favorite ? "#3470FF" : "#ffffff"}
+        // svgFill={favorite ? "#3470FF" : "none"}
+        svgStroke="currentColor"
+        svgFill={favorite ? "currentColor" : "none"}
+        // svgFill="currentColor"
         svgWidth={18}
         svgHeight={18}
       />

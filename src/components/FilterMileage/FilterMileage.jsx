@@ -66,7 +66,7 @@ const FilterMileage = ({ setChoseMileage }) => {
         <TextFrom>From</TextFrom>
         <InputFrom
           id="mileageFrom"
-          name="mileage"
+          name="mileageFrom"
           value={changeValue(fromMileage)}
           onChange={handleChangeFromMileage}
           onBlur={handleBlur}
@@ -76,7 +76,7 @@ const FilterMileage = ({ setChoseMileage }) => {
         <TextTo>To</TextTo>
         <InputTo
           id="mileageTo"
-          name="mileage"
+          name="mileageTo"
           value={changeValue(toMileage)}
           onChange={handleChangeToMileage}
           onBlur={handleBlur}

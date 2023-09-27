@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
+import { useTheme } from "styled-components";
 import {
   Wrapper,
   Label,
@@ -37,6 +38,8 @@ const FilterBrand = ({ setCarModel }) => {
   const [search, setSearch] = useState("");
   const [openList, setOpenList] = useState(false);
   const [fiteredModels, setFilteredModels] = useState([]);
+
+  const theme = useTheme();
 
   useEffect(() => {
     setFilteredModels(listOfCars);
@@ -95,7 +98,7 @@ const FilterBrand = ({ setCarModel }) => {
           <Icon
             style={{ transform: openList ? "rotate(180deg)" : "" }}
             id="icon-arrow"
-            svgStroke="#121417"
+            svgStroke={theme.color.primary}
             svgFill="none"
             svgWidth={20}
             svgHeight={20}

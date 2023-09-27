@@ -7,9 +7,12 @@ const lightTheme = {
   filters: "#8A8A89", // filters names
   select: "rgba(18, 20, 23, 0.20)", // dropdown list
   btnText: "#fff", // button text
+  btnHover: "#0B44CD",
+  themeBorder: "#121417",
   bg: "#fff", // fon
   filtersBg: "#F7F7FB",
   filtersShadow: "rgba(0, 0, 0, 0.02)",
+  filtersInputBorder: "#fff",
   filtersBorder: "rgba(18, 20, 23, 0.05)",
   filtersMileageBorder: "rgba(138, 138, 137, 0.20)",
   buttonBg: "#3470FF",
@@ -24,13 +27,16 @@ const darktheme = {
   stroke: "rgba(255, 255, 255, 0.30)",
   conditions: "#363535", // conditions in modal
   filters: "#8A8A89", // filters names
-  select: "rgba(18, 20, 23, 0.20)", // dropdown list
+  select: "rgba(255, 255, 255, 0.3)", // dropdown list
   btnText: "#fff",
+  btnHover: "#0B44CD",
+  themeBorder: "#fff",
   bg: "#121417",
-  filtersBg: "#F7F7FB",
+  filtersBg: "#121417",
   filtersShadow: "rgba(255, 255, 255, 0.02)",
-  filtersBorder: "rgba(18, 20, 23, 0.05)",
-  filtersMileageBorder: "rgba(138, 138, 137, 0.20)",
+  filtersInputBorder: "#fff",
+  filtersBorder: "rgba(255, 255, 255, 0.2)",
+  filtersMileageBorder: "#fff",
   buttonBg: "#3470FF",
   conditionsBg: "#F9F9F9",
   closeIconStroke: "#F9F9F9",
@@ -48,6 +54,7 @@ const defaultTheme = {
     lg: "18px",
   },
   borderRadius: {
+    extraSmall: "8px",
     small: "12px",
     medium: "14px",
     large: "24px",

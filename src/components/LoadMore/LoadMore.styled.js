@@ -17,4 +17,9 @@ export const ButtonMore = styled.button`
   color: ${({ theme }) => theme.color.secondary};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    color: ${({ theme }) => theme.color.btnHover};
+  }
 `;

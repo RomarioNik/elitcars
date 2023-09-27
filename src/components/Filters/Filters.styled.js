@@ -9,5 +9,6 @@ export const Form = styled.form`
   /* flex-direction: column; */
   justify-content: center;
   align-items: flex-end;
+  flex-wrap: wrap;
   gap: 18px;
 `;
