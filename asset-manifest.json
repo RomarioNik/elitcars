@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/elitcars/static/css/main.529fbed3.css",
-    "main.js": "/elitcars/static/js/main.a2dccddb.js",
+    "main.js": "/elitcars/static/js/main.55fe3bba.js",
     "static/media/car-1.jpg": "/elitcars/static/media/car-1.553fb855b6ba82d7f9c4.jpg",
     "static/media/car-3.jpeg": "/elitcars/static/media/car-3.9a0c3ddf57eab64aba92.jpeg",
     "static/media/car-2.jpeg": "/elitcars/static/media/car-2.d50d4d980edf2f33e68d.jpeg",
     "static/media/icons-sprite.svg": "/elitcars/static/media/icons-sprite.b63251f5391e016b6dd5b82d0b4b2f0e.svg",
     "index.html": "/elitcars/index.html",
     "main.529fbed3.css.map": "/elitcars/static/css/main.529fbed3.css.map",
-    "main.a2dccddb.js.map": "/elitcars/static/js/main.a2dccddb.js.map"
+    "main.55fe3bba.js.map": "/elitcars/static/js/main.55fe3bba.js.map"
   },
   "entrypoints": [
     "static/css/main.529fbed3.css",
-    "static/js/main.a2dccddb.js"
+    "static/js/main.55fe3bba.js"
   ]
 }
